@@ -28,9 +28,29 @@
     footer{
         align-self: stretch; // <----
 
-        &.empty {   // <----
+        &.empty {  
             opacity: 0.5;
         }
+    }
+}
+
+.currentEpisode {
+    text-align: center;
+    img{
+        border-radius: 1.5rem;
+    }
+
+    strong{
+        display: block;
+        margin-top: 2rem;
+        font: 600 1.25rem Lexend, sans-serif;
+    }
+
+    span{
+        display: block;
+        margin-top: 1rem;
+        opacity: 0.6;
+        line-height: 1.5rem;
     }
 }
 
@@ -74,7 +94,7 @@
 }
 
 
-// style do button diferenciado de acordo com o browser 
+// fix in the future
 .buttons {
     display: flex;
     align-items: center;
