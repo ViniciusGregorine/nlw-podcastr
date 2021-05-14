@@ -3,29 +3,21 @@ import {Player} from '../components/Player'
 
 import '../styles/global.scss'
 import styles from '../styles/app.module.scss'
-import { PlayContext } from '../contexts/PlayContex'
-import { useState } from 'react'
+import { PlayerContextProvider } from '../contexts/PlayContex'
 
-function MyApp({ Component, pageProps }) {
-  const [episodeList, setEpisodeList] = useState([])
-  const [currentEpisodesIndex, setCurrentEpisodeIndex] = useState(0)
 
-function play(episode){
-  setEpisodeList([episode])
-  setCurrentEpisodeIndex(0)
-  console.log('playado')
-}
-
+function MyApp({ Component, pageProps }) { 
   return (
-    <PlayContext.Provider value={{episodeList, currentEpisodesIndex, play}}>
-    <div className={styles.wrapper}>
-      <main>
-      <Header/>
-      <Component {...pageProps} />
-      </main>
-      <Player />
-    </div>
-    //</PlayContext.Provider> 
+    <PlayerContextProvider>
+      <div className={styles.wrapper}>
+        <main>
+        <Header/>
+        <Component {...pageProps} />
+        </main>
+        <Player />
+      </div>
+    </PlayerContextProvider>
+   
   )
 }
 
