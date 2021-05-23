@@ -31,7 +31,8 @@ export default function Episode(episode: any){  // cannot be any
     const {play} = usePlayer()
 
 
-    return ( 
+    return (
+        <div className={styles.scrollWrapper}> 
         <div className={styles.episode}> 
             <Head>
                 <title> {episode.title} | Podcastr</title>
@@ -59,6 +60,7 @@ export default function Episode(episode: any){  // cannot be any
                 <span>{episode.durationAsString}</span>
             </header>
             <div className={styles.description} dangerouslySetInnerHTML={{__html: episode.description}}/>
+        </div>
         </div>
     )
 }

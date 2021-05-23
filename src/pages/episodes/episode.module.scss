@@ -1,8 +1,14 @@
+.scrollWrapper{
+ overflow-y: auto;
+}
+
+
 .episode {
+    height:  calc(100vh - 6.5rem);
     max-width: 45rem;
     padding: 3rem 2rem;
     margin: 0 auto;
-    
+   
     .thumbnailContainer {
       position: relative;
   
@@ -80,6 +86,7 @@
       margin-top: 2rem;
       line-height: 1.675rem;
       color: var(--gray-800);
+      padding-bottom: 1rem;
   
       p {
         margin: 1.5rem 0;
