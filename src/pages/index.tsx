@@ -1,15 +1,15 @@
 import { api } from '../service/api'
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString'
- 
+import {usePlayer } from '../contexts/PlayContex'
+
+import styles from './home.module.scss'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import ptBR, {format, parseISO } from 'date-fns'
 import { GetStaticProps} from 'next'
 
-import styles from './home.module.scss'
-
-import {usePlayer } from '../contexts/PlayContex'
 
 type Episode = {
   id: string,
@@ -41,6 +41,7 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
     <Head>
       <title>Home | podcastr</title>
     </Head>
+
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
 
@@ -76,6 +77,7 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
           })}
         </ul>
       </section>
+
       <section className={styles.allEpisodes}> 
           <h2>Todos episódios</h2>
 

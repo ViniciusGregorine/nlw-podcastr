@@ -1,6 +1,11 @@
 .wrapper{
-    display: flex;
+  display: flex;
+  
+  main{
+    flex: 1;
+  }
 
-    main{flex: 1;
-    }
+//   @media (max-width: var(--breakpoint-desktop)) {
+//     flex-direction: column;
+//  }
 }
