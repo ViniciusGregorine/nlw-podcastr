@@ -19,6 +19,11 @@
   --purple-400: #9164FA; 
   --purple-500: #8257E5;
   --purple-800: #6F48C9;
+
+  --breakpoint-phone: 360px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1266px;
+  --breakpoint-LGdesktop: 1920px;
 }
 
 @media (max-width: 1000px){
